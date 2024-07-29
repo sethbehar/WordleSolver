@@ -1,6 +1,6 @@
 # Wordle Solver Script
 
-This Python script is designed to automate and optimize guesses for the Wordle game by processing feedback and refining future guesses based on past attempts.
+This fun Python script is designed to automate and optimize guesses for the Wordle game by processing feedback and refining future guesses based on past attempts.
 
 ## Features
 
