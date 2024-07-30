@@ -1,6 +1,4 @@
 from playwright.sync_api import sync_playwright
-import random
-import pyautogui
 from time import sleep
 
 def get_words():
@@ -43,17 +41,12 @@ def find_best_word(words, words_guessed, feedback):
 
     return None
 
-        
-
-
 def input_guess(page, row, guess):
     page.get_by_label(f"Row {row + 1}").get_by_label("1st letter, empty").click()
     page.keyboard.type(guess)
     page.keyboard.press("Enter")
-
     page.wait_for_timeout(1000)
     sleep(1)
-
     tile_selector = 'div.Tile-module_tile__UWEHN'
     tiles = page.locator(tile_selector)
     feedback = []
@@ -66,7 +59,6 @@ def input_guess(page, row, guess):
             feedback.append([aria_label[0], temp_arr[0], temp_arr[1]])
 
     return feedback
-
 
 def play_wordle(page, words):
     words_guessed = []
