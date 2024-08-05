@@ -78,7 +78,7 @@ def run(playwright):
     page.get_by_label("Close").click()
     words = get_words()
     play_wordle(page, words)
-    page.wait_for_timeout(10000)  
+    page.wait_for_timeout(50000)  
     browser.close()
 
 with sync_playwright() as playwright:
